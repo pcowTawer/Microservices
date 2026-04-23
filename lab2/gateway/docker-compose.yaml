@@ -1,0 +1,14 @@
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gateway
+    ports:
+      - '80:80'
+    networks:
+      - lab2-net
+
+networks:
+  lab2-net:
+    external: true
